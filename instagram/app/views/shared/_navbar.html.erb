@@ -12,17 +12,8 @@
           placeholder: "Search", autocomplete: "off" %>
         <div id="users-result"></div>
       <% end %>
-      <ul class="navbar-nav ml-md-auto">
-        <li class="nav-item">
-          <a class="nav-link core-sprite explore-icon hide-text" href="#">Explore</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link core-sprite notification-icon hide-text" href="#">Notification</a>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Profile", user_path(current_user), class: "nav-link core-sprite profile-icon hide-text" %>
-        </li>
-      </ul>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete,
+                class: "list-group-item list-group-item-action" %>
     </div>
   </div>
 </nav>
